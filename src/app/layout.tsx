@@ -20,7 +20,7 @@ const serifFont = Merriweather({
 });
 
 export const metadata: Metadata = {
-  title: 'Care At Home | Home Nurse in Ashok Nagar Ranchi | Clinical Healthcare',
+  title: 'Care At Home Ranchi',
   description: 'Certified home nursing care and clinical patient attendants in Ashok Nagar, Bariatu, Argora Ranchi. Registered healthcare agency established 2016. 12h & 24h shift nursing.',
   keywords: 'Home Nurse in Ashok Nagar Ranchi, Care At Home Ranchi, home nursing Ranchi, shift nursing care Ranchi, ICU care at home Ranchi, elderly attendant Ranchi',
 };
