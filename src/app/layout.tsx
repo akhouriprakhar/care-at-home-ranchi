@@ -20,33 +20,34 @@ const serifFont = Merriweather({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://careathomeranchi.com'),
   title: {
-    default: "Care at Home Ranchi | Clinical Home Nursing",
-    template: "%s | Care at Home Ranchi",
+    default: 'Care at Home Ranchi | Clinical Home Nursing',
+    template: '%s | Care at Home Ranchi',
   },
   description:
-    "Specialized 24/7 clinical home nursing, post-surgical care, and in-home physiotherapy in Ranchi, Jharkhand.",
+    'Specialized 24/7 clinical home nursing, post-surgical care, and in-home physiotherapy in Ranchi, Jharkhand.',
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/images/brand/logo-full.png",
+    icon: '/images/brand/logo-full.png',
+    shortcut: '/images/brand/logo-full.png',
+    apple: '/images/brand/logo-full.png',
   },
   openGraph: {
-    title: "Care at Home Ranchi | Clinical Home Nursing",
+    title: 'Care at Home Ranchi | Clinical Home Nursing',
     description:
-      "Specialized 24/7 clinical home nursing, post-surgical care, and in-home physiotherapy in Ranchi, Jharkhand.",
-    url: "https://careathomeranchi.com",
-    siteName: "Care at Home Ranchi",
+      'Specialized 24/7 clinical home nursing, post-surgical care, and in-home physiotherapy in Ranchi, Jharkhand.',
+    url: 'https://careathomeranchi.com',
+    siteName: 'Care at Home Ranchi',
     images: [
       {
-        url: "/images/brand/logo-full.png",
+        url: 'https://careathomeranchi.com/images/brand/logo-full.png',
         width: 1200,
         height: 630,
-        alt: "Care at Home Ranchi Logo",
+        alt: 'Care at Home Ranchi Logo',
       },
     ],
-    locale: "en_IN",
-    type: "website",
+    locale: 'en_IN',
+    type: 'website',
   },
 };
 
