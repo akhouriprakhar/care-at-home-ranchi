@@ -1,5 +1,8 @@
 import type { MetadataRoute } from 'next';
 
+// Forces Next.js to statically generate this file during the build
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://careathomeranchi.com';
 
