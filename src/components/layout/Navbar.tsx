@@ -26,7 +26,7 @@ export const Navbar: React.FC = () => {
             className="flex items-center gap-3"
           >
             <Image
-              src="/images/brand/logo-full.png"
+              src="/images/brand/logo-full.webp"
               alt="Care at Home, Ranchi Logo"
               width={160}
               height={44}

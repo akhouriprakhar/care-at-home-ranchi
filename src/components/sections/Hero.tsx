@@ -135,7 +135,7 @@ export const Hero: React.FC = () => {
           >
             <div className="relative w-full max-w-md aspect-[4/3] rounded-3xl overflow-hidden border border-white/20 shadow-2xl bg-glow-teal">
               <Image
-                src="/images/brand/caregiver.jpg"
+                src="/images/brand/caregiver.webp"
                 alt="Care at Home, Ranchi nurse attentively caring for patient"
                 fill
                 className="object-cover"

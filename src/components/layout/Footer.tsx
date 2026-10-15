@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-3">
               <Image
-                src="/images/brand/logo-full.png"
+                src="/images/brand/logo-full.webp"
                 alt="Care at Home, Ranchi Logo"
                 width={160}
                 height={44}

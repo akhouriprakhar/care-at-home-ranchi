@@ -1,3 +1,4 @@
+# Global security headers for all routes
 /*
   X-DNS-Prefetch-Control: on
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
@@ -5,3 +6,41 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Content-hashed immutable assets (Next.js static chunks)
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Media and brand images
+/images/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# Diagnostic health endpoint
+/api/health
+  Cache-Control: public, max-age=60, must-revalidate
+
+# Search engine discovery
+/robots.txt
+  Cache-Control: public, max-age=86400
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+
+# Clean HTML routes: immediate client revalidation to prevent stale deployment states
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/about
+  Cache-Control: public, max-age=0, must-revalidate
+/contact
+  Cache-Control: public, max-age=0, must-revalidate
+/reviews
+  Cache-Control: public, max-age=0, must-revalidate
+/services
+  Cache-Control: public, max-age=0, must-revalidate
+/services/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Direct static HTML file and RSC navigation data fallbacks
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/*.txt
+  Cache-Control: public, max-age=0, must-revalidate

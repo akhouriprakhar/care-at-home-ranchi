@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   description:
     'Specialized 24/7 clinical home nursing, post-surgical care, and in-home physiotherapy in Ranchi, Jharkhand.',
   icons: {
-    icon: '/images/brand/logo-full.png',
-    shortcut: '/images/brand/logo-full.png',
+    icon: '/images/brand/logo-full.webp',
+    shortcut: '/images/brand/logo-full.webp',
     apple: '/images/brand/logo-full.png',
   },
   openGraph: {
