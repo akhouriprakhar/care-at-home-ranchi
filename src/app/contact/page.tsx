@@ -1,220 +1,261 @@
 import React from 'react';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { 
-  MapPin, 
   Phone, 
+  MapPin, 
   Mail, 
   Clock, 
   ShieldCheck, 
   Building2, 
   CheckCircle2, 
-  CalendarX,
-  Stethoscope
+  ExternalLink
 } from 'lucide-react';
 import { BRAND_DATA } from '@/constants/site-data';
-import { ContactMap } from '@/components/ui/ContactMap';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Care at Home, Ranchi - Phone & Office Location',
-  description: 'Get in touch with Care at Home, Ranchi. Call +91-9430156190. Address: Care At Home, In Front Of Tribes India, Opposite Of Ashok Nagar Gate No. 5, Ranchi. Office open Mon-Sat (Closed Sundays).',
+  title: 'Contact Care at Home Ranchi | 24/7 Helpline & Office Location',
+  description:
+    'Contact Care at Home Ranchi. Call +91-9430156190 for home nursing, ICU care, patient hygiene, and physiotherapy across Ranchi. Office at Ashok Nagar Gate No. 5.',
 };
 
 export default function ContactPage() {
-  const exactAddress = "Care At Home, In Front Of Tribes India, Opposite Of Ashok Nagar Gate No. 5, Ranchi";
 
   return (
-    <div className="overflow-x-hidden bg-[#F8FAFC]">
-      {/* Top Hero Banner */}
-      <section className="bg-[#0C364A] text-white py-10 sm:py-14 bg-hero-ambient border-b border-slate-700/60 shadow-lg relative overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-80 h-80 bg-[#20AD96]/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-[#8EC63F]/10 rounded-full blur-3xl pointer-events-none" />
+    <main className="min-h-screen pt-16">
+      {/* Hero Header in careathomeranchi.com Colors */}
+      <section className="bg-[#072331] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-white/10 relative overflow-hidden bg-hero-ambient">
+        <div className="absolute inset-0 bg-grain pointer-events-none opacity-30 z-0" />
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#8EC63F]/12 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-10 w-96 h-96 bg-[#20AD96]/20 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-3">
-          <div className="inline-flex items-center gap-2 bg-[#20AD96]/20 border border-[#20AD96]/40 px-3.5 py-1 rounded-full text-xs font-bold text-[#8EC63F] shadow-xs backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 bg-[#20AD96]/20 border border-[#20AD96]/40 px-3.5 py-1 rounded-full text-xs font-semibold text-[#8EC63F] shadow-xs backdrop-blur-md">
             <Clock className="w-3.5 h-3.5 text-[#8EC63F]" />
-            <span>Office Hours: Monday – Saturday (Closed Sundays)</span>
+            <span>Administrative Office: Mon – Sat • 24/7 Caregiver Response</span>
           </div>
 
-          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold font-serif text-white tracking-tight">
-            Contact Us & Office Location
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Contact &amp; Office Location in{' '}
+            <span className="text-[#8EC63F]">
+              Ranchi
+            </span>
           </h1>
 
-          <p className="text-slate-200 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
-            Have questions about home nursing or attendant care? Reach out directly via phone or visit our office in Ranchi.
+          <p className="text-slate-200 text-sm sm:text-base max-w-2xl font-sans font-light leading-relaxed">
+            Reach our clinical care coordination desk for home nursing, ICU setup, elderly patient hygiene, and in-home physiotherapy across all localities of Ranchi.
           </p>
         </div>
       </section>
 
       {/* Main Content Area */}
-      <section className="py-8 sm:py-12 bg-[#F8FAFC]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <section className="py-10 sm:py-14 bg-[#F8FAFC]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           
-          {/* Simple, Friendly Contact Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
-            {/* Card 1: Call Us Directly */}
-            <div className="glass-panel-dark text-white rounded-3xl p-6 sm:p-8 shadow-xl border border-white/15 space-y-5 flex flex-col justify-between">
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-1.5 bg-[#8EC63F]/20 border border-[#8EC63F]/40 px-3 py-1 rounded-full text-xs font-bold text-[#8EC63F]">
-                  <Phone className="w-3.5 h-3.5 fill-[#8EC63F]" />
-                  <span>Call Us Directly</span>
+            {/* Left Column: Direct Helpline & Office Coordinates */}
+            <div className="lg:col-span-6 space-y-6">
+              
+              {/* Card 1: 24/7 Helpline Card */}
+              <div className="bg-[#0C364A] text-white rounded-3xl p-6 sm:p-8 shadow-xl border border-white/10 space-y-5">
+                <div className="space-y-2">
+                  <div className="inline-flex items-center gap-1.5 bg-[#8EC63F]/20 border border-[#8EC63F]/40 px-3 py-1 rounded-full text-xs font-bold text-[#8EC63F]">
+                    <Phone className="w-3.5 h-3.5 fill-[#8EC63F] text-[#8EC63F]" />
+                    <span>24/7 Direct Helpline</span>
+                  </div>
+
+                  <h2 className="text-2xl font-heading font-bold text-white">
+                    Clinical Care Desk
+                  </h2>
+                  <p className="text-xs sm:text-sm text-slate-200 font-sans font-light">
+                    Immediate clinical dispatch and shift planning. Available 24 hours for emergency home nursing.
+                  </p>
                 </div>
 
-                <h2 className="text-xl sm:text-2xl font-bold font-serif text-white">
-                  Phone Helpline
-                </h2>
+                <div className="bg-[#072331] p-5 rounded-2xl border border-white/10 space-y-3">
+                  <span className="text-[10px] uppercase tracking-wider font-extrabold text-[#8EC63F] block font-sans">
+                    Tap to Call Direct Helpline
+                  </span>
+                  <a
+                    href={`tel:${BRAND_DATA.contact.phone}`}
+                    className="inline-flex items-center gap-3 text-2xl sm:text-3xl font-heading font-extrabold text-white hover:text-[#8EC63F] transition-colors"
+                  >
+                    <Phone className="w-6 h-6 text-[#8EC63F] flex-shrink-0 animate-bounce" />
+                    <span>{BRAND_DATA.contact.phone}</span>
+                  </a>
+                  <p className="text-xs text-slate-300 font-sans">
+                    Direct coordinator line • No IVR delay
+                  </p>
+                </div>
 
-                <p className="text-slate-200 text-xs sm:text-sm font-light leading-relaxed">
-                  Call our care coordinator directly to discuss your patient&apos;s requirements and arrange nursing shifts:
-                </p>
+                <div className="pt-2 flex flex-col sm:flex-row gap-3">
+                  <a
+                    href={`tel:${BRAND_DATA.contact.phone}`}
+                    className="flex-1 bg-[#8EC63F] hover:bg-[#9ee543] text-[#072331] font-extrabold text-xs uppercase tracking-wider py-3.5 px-5 rounded-xl shadow-lg transition-all text-center flex items-center justify-center gap-2"
+                  >
+                    <Phone className="w-4 h-4 text-[#072331]" />
+                    <span>Call Helpline: {BRAND_DATA.contact.phone}</span>
+                  </a>
 
-                {/* Clear Office Hours Box */}
-                <div className="bg-white/10 p-4 rounded-2xl border border-white/15 text-xs text-slate-200 space-y-2 backdrop-blur-md">
-                  <div className="font-bold text-[#8EC63F] flex items-center gap-1.5 border-b border-white/10 pb-1.5">
-                    <Clock className="w-3.5 h-3.5" />
-                    <span>Office & Care Timings:</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-300">• Office Open:</span>
-                    <span className="font-semibold text-white">Mon – Sat</span>
-                  </div>
-                  <div className="flex items-center justify-between text-amber-300">
-                    <span className="flex items-center gap-1">
-                      <CalendarX className="w-3 h-3 text-amber-400" />
-                      • Office Desk:
-                    </span>
-                    <span className="font-bold">Closed Sundays</span>
-                  </div>
-                  <div className="flex items-center justify-between text-[#8EC63F] pt-1 border-t border-white/10 font-medium">
-                    <span>• Attendant Duty:</span>
-                    <span>12h & 24h Shifts</span>
-                  </div>
+                  <a
+                    href={BRAND_DATA.contact.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-[#20AD96]/20 hover:bg-[#20AD96]/30 text-[#8EC63F] border border-[#20AD96]/40 font-bold text-xs uppercase tracking-wider py-3.5 px-5 rounded-xl shadow transition-all text-center flex items-center justify-center gap-2"
+                  >
+                    <MapPin className="w-4 h-4 text-[#8EC63F]" />
+                    <span>Office Location</span>
+                  </a>
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-white/15 space-y-3">
-                <a
-                  href={`tel:${BRAND_DATA.contact.phone}`}
-                  className="w-full bg-[#8EC63F] text-[#072331] font-extrabold py-3.5 px-6 rounded-xl hover:bg-[#9ee543] transition-all flex items-center justify-center gap-2 text-sm uppercase tracking-wider shadow-lg"
-                >
-                  <Phone className="w-4 h-4 fill-[#072331]" />
-                  <span>Call {BRAND_DATA.contact.phone}</span>
-                </a>
-
-                <div className="flex items-center justify-between text-xs text-slate-300">
-                  <span className="flex items-center gap-1.5 truncate">
-                    <Mail className="w-3.5 h-3.5 text-[#20AD96] flex-shrink-0" />
-                    <span className="truncate">{BRAND_DATA.contact.email}</span>
-                  </span>
-                  <span className="flex items-center gap-1 text-[#8EC63F] font-semibold flex-shrink-0">
-                    <ShieldCheck className="w-3.5 h-3.5" />
-                    <span>Verified</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2: Visit Our Office (With exact address spelling & proper capitalization) */}
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-lg space-y-5 flex flex-col justify-between">
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 bg-[#20AD96]/10 border border-[#20AD96]/30 px-3 py-1 rounded-full text-xs font-bold text-[#20AD96]">
+              {/* Card 2: Office & Visiting Hours */}
+              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-4">
+                <div className="inline-flex items-center gap-1.5 bg-[#20AD96]/10 border border-[#20AD96]/20 px-3 py-1 rounded-full text-xs font-bold text-[#20AD96]">
                   <Building2 className="w-3.5 h-3.5 text-[#20AD96]" />
-                  <span>Visit Our Office</span>
+                  <span>Physical Care Center</span>
                 </div>
 
-                <h2 className="text-xl sm:text-2xl font-bold text-[#0C364A] font-serif">
-                  Care at Home, Ranchi
-                </h2>
+                <h3 className="text-xl font-heading font-bold text-[#0C364A]">
+                  Ashok Nagar Office
+                </h3>
 
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-light">
-                  Our office is conveniently located near Gate No. 5 in Ashok Nagar for in-person consultation and care planning.
-                </p>
-
-                <div className="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200 text-xs text-[#0C364A] space-y-2">
-                  <div className="flex items-start gap-2.5">
-                    <MapPin className="w-4 h-4 text-[#20AD96] mt-0.5 flex-shrink-0" />
-                    <span className="font-semibold leading-relaxed">{exactAddress}</span>
+                <div className="space-y-3 text-xs sm:text-sm text-slate-700 font-sans">
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-[#20AD96] flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-bold text-[#0C364A] block">Full Address</span>
+                      <span>{BRAND_DATA.contact.address}</span>
+                    </div>
                   </div>
+
+                  <div className="flex items-start gap-3">
+                    <Clock className="w-5 h-5 text-[#20AD96] flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-bold text-[#0C364A] block">Visiting Hours</span>
+                      <span>{BRAND_DATA.hours}</span>
+                      <span className="text-slate-500 block text-xs">(Staff deployments operate 24/7)</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <Mail className="w-5 h-5 text-[#20AD96] flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-bold text-[#0C364A] block">Official Email</span>
+                      <a href={`mailto:${BRAND_DATA.contact.email}`} className="text-[#20AD96] hover:underline font-semibold">
+                        {BRAND_DATA.contact.email}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <a
+                    href={BRAND_DATA.contact.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-[#0C364A] hover:text-[#20AD96] transition-colors uppercase tracking-wider"
+                  >
+                    <span>Get Directions on Google Maps</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-slate-200/80 space-y-3">
-                <a
-                  href={BRAND_DATA.contact.googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full bg-[#0C364A] text-white font-bold py-3 px-6 rounded-xl hover:bg-[#072331] transition-all flex items-center justify-center gap-2 text-xs uppercase tracking-wider shadow"
-                >
-                  <MapPin className="w-3.5 h-3.5 text-[#8EC63F]" />
-                  <span>Open Directions in Google Maps</span>
-                </a>
-
-                <div className="flex items-center justify-between text-xs text-slate-500 font-medium">
-                  <span className="flex items-center gap-1">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#20AD96]" />
-                    <span>Ashok Nagar Gate No. 5</span>
+              {/* Card 3: Scope Policy */}
+              <div className="bg-[#072331] text-white rounded-2xl p-5 border border-white/10 flex items-start gap-3 text-xs">
+                <ShieldCheck className="w-5 h-5 text-[#8EC63F] flex-shrink-0 mt-0.5" />
+                <div className="space-y-1">
+                  <span className="font-bold text-[#8EC63F] uppercase block font-heading tracking-wider">
+                    Clinical Standards Notice
                   </span>
-                  <span className="text-slate-400 font-normal">Est. 2016</span>
+                  <p className="text-slate-300 font-light leading-relaxed">
+                    Care at Home Ranchi provides clinical healthcare only (nursing, patient hygiene, physiotherapy, medical attendant shifts). We do NOT supply domestic maids, cooks, or domestic cleaning staff.
+                  </p>
                 </div>
               </div>
+
             </div>
 
-            {/* Card 3: Care Services Coverage */}
-            <div className="bg-[#F8FAFC] rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-lg space-y-5 flex flex-col justify-between">
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 bg-[#8EC63F]/20 border border-[#8EC63F]/40 px-3 py-1 rounded-full text-xs font-bold text-[#0C364A]">
-                  <Stethoscope className="w-3.5 h-3.5 text-[#20AD96]" />
-                  <span>Home Nursing Services</span>
+            {/* Right Column: Google Maps Location View */}
+            <div className="lg:col-span-6 space-y-6">
+              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-4">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-heading font-bold text-[#0C364A]">
+                    Office Map & Directions
+                  </h3>
+                  <span className="text-xs bg-[#20AD96]/10 text-[#20AD96] font-semibold px-2.5 py-1 rounded-full">
+                    Opp. Gate 5
+                  </span>
                 </div>
 
-                <h2 className="text-xl sm:text-2xl font-bold text-[#0C364A] font-serif">
-                  Serving Ranchi City
-                </h2>
+                <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200 relative shadow-inner">
+                  <iframe
+                    src={BRAND_DATA.contact.googleMapsEmbedUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Care at Home Office Location, Ashok Nagar, Ranchi"
+                    className="w-full h-full"
+                  />
+                </div>
 
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-light">
-                  We assign qualified nurses (GNM/B.Sc) and trained attendants for home patient care across Ranchi.
+                <div className="flex items-center justify-between pt-2">
+                  <p className="text-xs text-slate-500 font-sans">
+                    Opposite Gate No. 5, Ashok Nagar, Ranchi, Jharkhand 834002
+                  </p>
+                  <a
+                    href={BRAND_DATA.contact.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 bg-[#0C364A] hover:bg-[#072331] text-white text-xs font-bold py-2 px-3.5 rounded-xl transition-all shadow-sm flex-shrink-0"
+                  >
+                    <span>Open Maps</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Ranchi Service Localities */}
+              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-3">
+                <h4 className="text-base font-heading font-bold text-[#0C364A]">
+                  Coverage Across Ranchi Municipal Area
+                </h4>
+                <p className="text-xs text-slate-600 font-sans leading-relaxed">
+                  Caregivers are dispatched daily across all residential sectors:
                 </p>
-
-                <div className="space-y-2 pt-1">
-                  <div className="flex items-center gap-2 text-xs text-[#0C364A] font-medium bg-white p-2.5 rounded-xl border border-slate-200">
-                    <CheckCircle2 className="w-4 h-4 text-[#20AD96] flex-shrink-0" />
-                    <span>Background Verified Staff</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-xs text-[#0C364A] font-medium bg-white p-2.5 rounded-xl border border-slate-200">
-                    <CheckCircle2 className="w-4 h-4 text-[#20AD96] flex-shrink-0" />
-                    <span>Doctor-Prescribed Care Protocols</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-xs text-[#0C364A] font-medium bg-white p-2.5 rounded-xl border border-slate-200">
-                    <CheckCircle2 className="w-4 h-4 text-[#20AD96] flex-shrink-0" />
-                    <span>12-Hour & 24-Hour Attendant Shifts</span>
-                  </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs font-sans">
+                  {[
+                    'Ashok Nagar',
+                    'Harmu Colony',
+                    'Doranda',
+                    'Morabadi',
+                    'Kanke Road',
+                    'Bariatu',
+                    'Lalpur',
+                    'Ratu Road',
+                    'Hinoo',
+                    'Namkum',
+                    'Dhurwa / HEC',
+                    'Tatisilwai',
+                  ].map((area) => (
+                    <div key={area} className="flex items-center gap-1.5 text-slate-700">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#20AD96] flex-shrink-0" />
+                      <span>{area}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">
-                <span className="font-semibold text-[#0C364A]">Registered Agency</span>
-                <span className="text-slate-500">Ranchi, Jharkhand</span>
-              </div>
             </div>
 
-          </div>
-
-          {/* Interactive Google Map Location */}
-          <div className="space-y-3">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-xs font-extrabold text-[#20AD96] uppercase tracking-wider">
-                <MapPin className="w-4 h-4" />
-                <span>Office Location Map</span>
-              </div>
-              <span className="text-xs text-slate-500 font-light">
-                {exactAddress}
-              </span>
-            </div>
-            <ContactMap />
           </div>
 
         </div>
       </section>
-    </div>
+    </main>
   );
 }

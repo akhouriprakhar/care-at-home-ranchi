@@ -15,13 +15,13 @@ const criticalCareData: ServiceDetailData = {
   iconName: 'activity',
   quickStats: [
     '24/7 Round-the-Clock Duty',
-    'Certified GNM & B.Sc Staff',
+    'Experienced Nurses & Caregivers',
     'Tracheostomy & IV Care',
     'Direct Desk Office Call'
   ],
   overviewTitle: 'Comprehensive Clinical Scope & Overview',
   overviewParagraphs: [
-    'Our Critical Care & ICU Support service brings hospital-grade intensive care into your home. Designed specifically for post-ICU discharge patients, brain stroke paralysis, tracheostomy dependence, or complex surgical recovery, our qualified GNM and B.Sc nursing staff execute physician orders with clinical precision.',
+    'Our Critical Care & ICU Support service brings hospital-grade intensive care into your home. Designed specifically for post-ICU discharge patients, brain stroke paralysis, tracheostomy dependence, or complex surgical recovery, our qualified nurses, caregivers, and bedside assistants execute physician orders with clinical precision.',
     'We maintain strict hospital hygiene protocols, sterile dressing procedures, and continuous vital parameter tracking to prevent secondary hospital-acquired infections and support rapid patient recovery.'
   ],
   col1Title: 'Prescribed Medical Procedures',

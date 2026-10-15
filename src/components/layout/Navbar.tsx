@@ -16,38 +16,35 @@ export const Navbar: React.FC = () => {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#0C364A]/95 backdrop-blur-md border-b border-slate-700/60 shadow-xl transition-all">
-      {/* Ambient Gradient Glow Line */}
-      <div className="h-1 w-full bg-gradient-to-r from-[#20AD96] via-[#8EC63F] to-[#20AD96]" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-[#0C364A]/95 backdrop-blur-xl border-b border-white/10 shadow-xl transition-all m-0 p-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
         {/* Brand Logo & Title */}
         <Link href="/" className="flex items-center space-x-3 group">
           <motion.div 
-            whileHover={{ scale: 1.04 }}
+            whileHover={{ scale: 1.03 }}
             transition={{ type: 'spring', stiffness: 400, damping: 25 }}
             className="flex items-center gap-3"
           >
             <Image
-              src="/logo.png"
+              src="/images/brand/logo-full.png"
               alt="Care at Home, Ranchi Logo"
-              width={150}
-              height={40}
-              className="h-9 w-auto object-contain"
+              width={160}
+              height={44}
+              className="h-10 w-auto object-contain"
               priority
             />
             <div className="flex flex-col border-l border-white/20 pl-3">
-              <span className="text-base font-bold font-serif text-white leading-tight tracking-wide group-hover:text-[#8EC63F] transition-colors">
+              <span className="text-base font-bold font-heading text-white leading-tight tracking-wide group-hover:text-[#8EC63F] transition-colors">
                 Care at Home
               </span>
-              <span className="text-[11px] text-slate-300 font-medium tracking-wider uppercase flex items-center gap-1">
+              <span className="text-[10px] text-slate-300 font-medium tracking-wider uppercase flex items-center gap-1 font-sans">
                 <span>Ranchi, Jharkhand</span>
               </span>
             </div>
           </motion.div>
         </Link>
 
-        {/* Desktop Navigation Links with Active Indicators & Dropdown Animations */}
+        {/* Desktop Navigation Links with Active Indicators & Dropdown */}
         <nav className="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-widest font-extrabold">
           {/* Home Link */}
           <Link
@@ -105,7 +102,7 @@ export const Navbar: React.FC = () => {
                       <Sparkles className="w-3 h-3 text-[#8EC63F]" />
                       <span>Clinical Care Directory</span>
                     </span>
-                    <span className="bg-[#20AD96]/20 border border-[#20AD96]/40 px-2 py-0.5 rounded-md text-[#20AD96]">
+                    <span className="bg-[#20AD96]/20 border border-[#20AD96]/40 px-2 py-0.5 rounded-md text-[#8EC63F]">
                       12h / 24h
                     </span>
                   </div>
@@ -244,27 +241,33 @@ export const Navbar: React.FC = () => {
           </Link>
         </nav>
 
-        {/* Sole "Call Us" Action Button with Animated Ringing Micro-Interaction */}
+        {/* Desktop Direct Contact Action Buttons in careathomeranchi.com palette */}
         <div className="hidden lg:flex items-center space-x-3">
+
           <motion.a
             href={`tel:${BRAND_DATA.contact.phone}`}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
-            className="bg-[#8EC63F] text-[#072331] font-extrabold px-5 py-2.5 rounded-xl shadow-lg hover:bg-[#9de442] hover:shadow-[#8EC63F]/30 transition-all text-xs flex items-center gap-2 uppercase tracking-wider group"
+            className="bg-[#8EC63F] hover:bg-[#9ee543] text-[#072331] font-extrabold px-5 py-2 rounded-xl shadow-lg hover:shadow-[#8EC63F]/40 transition-all text-xs flex items-center gap-2 uppercase tracking-wider group"
           >
             <motion.span
               animate={{ rotate: [0, -12, 12, -12, 0] }}
               transition={{ repeat: Infinity, repeatDelay: 3.5, duration: 0.6 }}
             >
-              <Phone className="w-3.5 h-3.5 fill-[#072331]" />
+              <Phone className="w-3.5 h-3.5 fill-[#072331] text-[#072331]" />
             </motion.span>
-            <span>Call Us</span>
+            <span>Call Us: {BRAND_DATA.contact.phone}</span>
           </motion.a>
         </div>
 
-        {/* Mobile Menu Drawer */}
-        <MobileMenu />
+        {/* Mobile Menu Drawer Toggle */}
+        <div className="lg:hidden">
+          <MobileMenu />
+        </div>
       </div>
+
+      {/* Bottom Accent Line in signature teal & lime */}
+      <div className="h-0.5 w-full bg-gradient-to-r from-[#20AD96] via-[#8EC63F] to-[#20AD96]" />
     </header>
   );
 };

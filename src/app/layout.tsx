@@ -1,23 +1,10 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans, Merriweather } from 'next/font/google';
 import '@/styles/globals.css';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { EmergencyCallFAB } from '@/components/layout/EmergencyCallFAB';
+import { PreFooterCTA } from '@/components/layout/PreFooterCTA';
+import { StickyMobileCTA } from '@/components/layout/StickyMobileCTA';
 import { BRAND_DATA } from '@/constants/site-data';
-
-const sansFont = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  variable: '--font-sans',
-  display: 'swap',
-});
-
-const serifFont = Merriweather({
-  weight: ['300', '400', '700', '900'],
-  subsets: ['latin'],
-  variable: '--font-serif',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://careathomeranchi.com'),
@@ -55,12 +42,12 @@ const jsonLdSchema = {
   '@context': 'https://schema.org',
   '@type': 'MedicalBusiness',
   name: BRAND_DATA.name,
-  image: 'https://careathomeranchi.com/logo.png',
+  image: 'https://careathomeranchi.com/images/brand/logo-full.png',
   '@id': 'https://careathomeranchi.com',
   url: 'https://careathomeranchi.com',
   telephone: BRAND_DATA.contact.phone,
   email: BRAND_DATA.contact.email,
-  priceRange: 'Custom Clinical Assessment',
+  priceRange: '₹₹',
   address: {
     '@type': 'PostalAddress',
     streetAddress: BRAND_DATA.contact.address,
@@ -71,9 +58,19 @@ const jsonLdSchema = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 23.3441,
-    longitude: 85.3096,
+    latitude: 23.35047,
+    longitude: 85.28357,
   },
+  areaServed: [
+    'Ashok Nagar',
+    'Harmu',
+    'Kanke',
+    'Bariatu',
+    'Morabadi',
+    'Doranda',
+    'Lalpur',
+    'Ranchi',
+  ],
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: [
@@ -101,8 +98,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${sansFont.variable} ${serifFont.variable} overflow-x-hidden max-w-full`}>
+    <html lang="en" data-scroll-behavior="smooth" className="overflow-x-hidden max-w-full">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
@@ -113,8 +112,9 @@ export default function RootLayout({
         <main className="flex-grow w-full max-w-full overflow-x-hidden pb-16 sm:pb-0">
           {children}
         </main>
-        <EmergencyCallFAB />
+        <PreFooterCTA />
         <Footer />
+        <StickyMobileCTA />
       </body>
     </html>
   );

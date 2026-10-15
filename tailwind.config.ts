@@ -12,32 +12,35 @@ const config: Config = {
         brand: {
           navy: "#0C364A",
           deepNavy: "#072331",
-          lime: "#8EC63F",
           teal: "#20AD96",
-          surface: "#F4F8F9",
+          lime: "#8EC63F",
+          surface: "#F8FAFC",
         },
         navy: {
           DEFAULT: "#0C364A",
           dark: "#072331",
         },
-        lime: {
-          DEFAULT: "#8EC63F",
-        },
         teal: {
           DEFAULT: "#20AD96",
+          brand: "#20AD96",
+        },
+        lime: {
+          DEFAULT: "#8EC63F",
+          brand: "#8EC63F",
         },
         surface: {
-          DEFAULT: "#F4F8F9",
+          DEFAULT: "#F8FAFC",
         },
       },
       fontFamily: {
-        sans: ['var(--font-sans)', 'Inter', 'sans-serif'],
-        serif: ['var(--font-serif)', 'Merriweather', 'serif'],
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+        heading: ['Inter', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+        serif: ['Inter', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
       },
       boxShadow: {
-        'glass': '0 8px 32px 0 rgba(7, 35, 49, 0.25)',
+        'glass': '0 8px 32px 0 rgba(12, 54, 74, 0.25)',
         'neon-teal': '0 0 20px rgba(32, 173, 150, 0.25)',
-        'neon-lime': '0 0 20px rgba(142, 198, 63, 0.25)',
+        'neon-lime': '0 0 20px rgba(142, 198, 63, 0.3)',
       },
       backdropBlur: {
         'xs': '2px',

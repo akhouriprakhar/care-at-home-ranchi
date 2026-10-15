@@ -26,17 +26,17 @@ export const MobileMenu: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 top-[65px] max-h-[calc(100vh-125px)] overflow-y-auto bg-[#072331]/95 backdrop-blur-2xl text-white border-b border-white/15 p-6 space-y-6 shadow-2xl z-[60]"
+            className="fixed inset-x-0 top-[65px] max-h-[calc(100vh-125px)] overflow-y-auto bg-[#072331]/98 backdrop-blur-2xl text-white border-b border-white/15 p-6 space-y-6 shadow-2xl z-[60]"
           >
             <div className="flex items-center justify-between text-xs text-amber-400 font-semibold border-b border-white/10 pb-3">
               <div className="flex items-center space-x-1.5">
                 <Star className="w-4 h-4 fill-amber-400" />
                 <span>{BRAND_DATA.rating.score} / 5 Rating ({BRAND_DATA.rating.count}+ Reviews)</span>
               </div>
-              <span className="text-[10px] text-slate-300 bg-white/10 px-2 py-0.5 rounded">Ranchi HQ</span>
+              <span className="text-[10px] text-slate-300 bg-white/10 px-2 py-0.5 rounded font-sans">Ashok Nagar HQ</span>
             </div>
 
-            <nav className="flex flex-col space-y-3.5 text-base font-semibold">
+            <nav className="flex flex-col space-y-3.5 text-base font-heading font-semibold">
               <Link
                 href="/"
                 onClick={() => setIsOpen(false)}
@@ -51,7 +51,7 @@ export const MobileMenu: React.FC = () => {
               >
                 Services Directory
               </Link>
-              <div className="pl-3 border-l border-white/15 space-y-2 text-xs font-normal text-slate-300">
+              <div className="pl-3 border-l border-white/15 space-y-2 text-xs font-normal font-sans text-slate-300">
                 <Link href="/services/critical-care" onClick={() => setIsOpen(false)} className="block hover:text-[#8EC63F]">
                   • Critical Care & ICU Support
                 </Link>
@@ -84,18 +84,33 @@ export const MobileMenu: React.FC = () => {
                 onClick={() => setIsOpen(false)}
                 className="hover:text-[#8EC63F] transition-colors py-1"
               >
-                Contact Desk
+                Contact & Directions
               </Link>
             </nav>
 
-            <div className="pt-3 border-t border-white/10 space-y-2">
-              <a href={`tel:${BRAND_DATA.contact.phone}`} onClick={() => setIsOpen(false)}>
-                <button className="w-full bg-[#8EC63F] text-[#072331] font-extrabold py-3 rounded-xl flex items-center justify-center gap-2 text-xs uppercase tracking-wider shadow">
-                  <Phone className="w-3.5 h-3.5 fill-[#072331]" />
-                  Call Helpline ({BRAND_DATA.contact.phone})
-                </button>
+            <div className="pt-3 border-t border-white/10 space-y-2.5 font-sans">
+              <a
+                href={`tel:${BRAND_DATA.contact.phone}`}
+                onClick={() => setIsOpen(false)}
+                className="w-full bg-[#8EC63F] hover:bg-[#9ee543] text-[#072331] font-extrabold py-3 rounded-xl flex items-center justify-center gap-2 text-xs uppercase tracking-wider shadow-lg shadow-[#8EC63F]/30 transition-colors"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#072331]" />
+                <span>Call Helpline: {BRAND_DATA.contact.phone}</span>
               </a>
-              <p className="text-[10px] text-center text-slate-400">Office Hours: Monday – Saturday (Closed Sundays)</p>
+
+              <a
+                href={BRAND_DATA.contact.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                className="w-full bg-[#20AD96]/20 hover:bg-[#20AD96]/30 text-[#8EC63F] border border-[#20AD96]/40 font-bold py-3 rounded-xl flex items-center justify-center gap-2 text-xs uppercase tracking-wider shadow transition-colors"
+              >
+                <span>Ashok Nagar Office Directions</span>
+              </a>
+
+              <p className="text-[10px] text-center text-slate-300 font-light">
+                Ashok Nagar Gate No. 5 • Direct Telephone Coordination
+              </p>
             </div>
           </motion.div>
         )}

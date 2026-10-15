@@ -22,7 +22,7 @@ export type ServiceItem = ServiceDetail;
 
 export const BRAND_DATA = {
   name: "Care at Home, Ranchi",
-  tagline: "Hospital-Grade Clinical Nursing & Home Healthcare Services",
+  tagline: "Professional Clinical Home Nursing & Patient Care Coordination",
   est: "2016",
   hours: "Office Hours: Monday – Saturday (Closed Sundays)",
   contact: {
@@ -33,7 +33,7 @@ export const BRAND_DATA = {
     state: "Jharkhand",
     pincode: "834002",
     googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1200.0!2d85.2835741639137!3d23.350473550777274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e129a8f46e77%3A0x47ba744bd4400b89!2sCare%20at%20Home%2C%20Ranchi!5e0!3m2!1sen!2sin!4v1784802826036!5m2!1sen!2sin",
-    googleMapsUrl: "https://maps.app.goo.gl/CareAtHomeRanchi",
+    googleMapsUrl: "https://maps.app.goo.gl/JQuKiimKwetQJcY29",
   },
   rating: { score: 4.7, count: 146, platform: "Verified Client Feedback" }
 };
@@ -448,7 +448,7 @@ export const REVIEWS_DATA = [
 export const FAQ_DATA = [
   {
     question: "What is home nursing care?",
-    answer: "Home nursing involves deploying certified GNM/B.Sc nurses and trained healthcare attendants to care for patients in their own homes under doctor recommendations. It is a cost-effective alternative to extended hospital stays."
+    answer: "Home nursing involves deploying experienced nurses, caregivers, and bedside assistants to care for patients in their own homes under doctor recommendations. It is a cost-effective alternative to extended hospital stays."
   },
   {
     question: "What services does Care at Home provide?",
@@ -544,8 +544,8 @@ export const SERVICES_LIST: ServiceDetail[] = [
     id: "critical-care",
     slug: "critical-care",
     title: "Critical Care & ICU Support",
-    shortDescription: "Tracheostomy care, Ryles tube enteral feeding, IV infusions, stroke recovery, and continuous ICU patient monitoring.",
-    fullDescription: "Our specialized ICU-trained nursing staff provides dedicated 12-hour and 24-hour shift clinical care for critically ill patients at home. Skilled in tracheostomy suctioning, catheterization, IV drips, brain stroke recovery, and paralysis management.",
+    shortDescription: "Tracheostomy care, Ryles tube enteral feeding, IV infusions, stroke recovery, and continuous clinical patient monitoring.",
+    fullDescription: "Our experienced clinical nursing staff provides dedicated 12-hour and 24-hour shift home nursing for recovering and bedridden patients. Skilled in tracheostomy suctioning, catheterization, IV drips, stroke recovery support, and paralysis management.",
     features: [
       "Tracheostomy Care & Airway Suctioning",
       "Ryles Tube Enteral Feeding & Flush",

@@ -15,7 +15,7 @@ export const ContactMap: React.FC = () => {
               <MapPin className="w-3.5 h-3.5" />
               <span>Care at Home, Ranchi • Office Location</span>
             </div>
-            <h3 className="text-xl sm:text-2xl font-serif font-bold text-white">
+            <h3 className="text-xl sm:text-2xl font-bold text-white">
               Visit Our Office
             </h3>
             <p className="text-slate-200 text-xs sm:text-sm font-light leading-relaxed">
